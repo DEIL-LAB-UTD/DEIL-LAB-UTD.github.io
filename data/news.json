@@ -1,0 +1,58 @@
+[
+    {
+        "date": "09/2025",
+        "content": "One paper on [multimodal robustness](https://arxiv.org/pdf/2506.00358) has been accepted to NeurIPS 2025 (D&B track)!"
+    },
+    {
+        "date": "08/2025",
+        "content": "I will be serving as an Area Chair for CVPR 2026."
+    },
+    {
+        "date": "06/2025",
+        "content": "One paper accepted by ICCV 2025 and one paper accepted by IROS 2025. Congratulations to all co-authors!"
+    },
+    {
+        "date": "05/2025",
+        "content": "Our 1st Workshop on [Multimodal Continual Learning](https://mclworkshop25.github.io/mcl-iccv2025/ICCV2025/index.html) will be held at ICCV ’25 in Honolulu, Hawai‘i. Please consider submitting your work!"
+    },
+    {
+        "date": "04/2025",
+        "content": "Our 2nd Workshop on [Test-Time Adaptation: Putting Updates to the Test! (PUT)](https://tta-icml2025.github.io/) will be held on July 18–19, 2025, at ICML '25 in Vancouver. Please consider submitting your work!"
+    },
+    {
+        "date": "02/2025",
+        "content": "Our paper on continual out-of-distribution detection accepted at CVPR 2025."
+    },
+    {
+        "date": "12/2024",
+        "content": "Our project has been selected by the Nvidia Academic Grant Program."
+    },
+    {
+        "date": "12/2024",
+        "content": "One paper on [test-time adaptation](https://arxiv.org/abs/2403.10650) has been accepted for an Oral Presentation at AAAI 2025. Congratulations to Sarthak!"
+    },
+    {
+        "date": "09/2024",
+        "content": "Two papers were accepted by NeurIPS 2024. Congratulations to my students!"
+    },
+    {
+        "date": "09/2024",
+        "content": "I will be serving as an Area Chair for CVPR 2025."
+    },
+    {
+        "date": "07/2024",
+        "content": "One paper about [deep neural network watermarking](https://arxiv.org/pdf/2403.10663) was accepted by ECCV 2024. Congratulations to my students!"
+    },
+    {
+        "date": "05/2024",
+        "content": "One paper is early accepted (top 11%) by MICCAI 2024."
+    },
+    {
+        "date": "02/2024",
+        "content": "[Unsupervised Hyperbolic Feature Learning](https://arxiv.org/pdf/2307.01421.pdf) and [Segment Every Out-of-Distribution Object](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhao_Segment_Every_Out-of-Distribution_Object_CVPR_2024_paper.pdf) are accepted by CVPR 2024."
+    },
+    {
+        "date": "01/2024",
+        "content": "I will be serving as an Area Chair for ECCV 2024."
+    }
+]

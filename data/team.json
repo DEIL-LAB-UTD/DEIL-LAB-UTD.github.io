@@ -1,0 +1,88 @@
+{
+    "group_photo": "img/group.jpeg",
+    "note": "We are always looking for self-motivated PhD students and Research Interns. If you have experience in computer vision or machine learning and are interested in solving challenging research problems, send an email to yunhui.guo@utdallas.edu with your CV, research statements, and transcripts.",
+    "PI": [
+        {
+            "name": "Yunhui Guo",
+            "info": "Assistant Professor, UT Dallas. Postdoc at University of California, Berkeley and PhD from University of California, San Diego.",
+            "link": "https://yunhuiguo.github.io/",
+            "image": "img/yunhui.png"
+        }
+    ],
+    "phd": [
+        {
+            "name": "Ouyang Xu",
+            "info": "Fall 2022. B.S. from Southeast University, China and M.S. from University of Wisconsin–Madison, USA.",
+            "link": "https://oxu2.github.io/",
+            "image": "img/Ouyang2023.png"
+        },
+        {
+            "name": "Wenjie Zhao",
+            "info": "Fall 2023. B.S. from Sichuan University, China and M.S. from Xi'an Jiaotong University, China.",
+            "link": "https://wenjiezhao1.github.io/",
+            "image": "img/Zhao.Wenjie_circle.jpg"
+        },
+        {
+            "name": "Sarthak Kumar Maharana",
+            "info": "Fall 2023. B.S. from IIIT Bhubaneswar, India and M.S. from the University of Southern California, USA.",
+            "link": "https://sarthaxxxxx.github.io/",
+            "image": "img/sarthak.jpg"
+        },
+        {
+            "name": "Ruiyu Mao",
+            "info": "Spring 2024. B.S from Case Western Reserve University, USA and M.S. from the University of Texas at Dallas, USA.",
+            "link": "https://www.linkedin.com/in/ruiyu-mao-83539a200/",
+            "image": "img/ruiyu.png"
+        }
+    ],
+    "master": [
+        {
+            "name": "Adrian Rodriguez",
+            "info": "MS CS, UT Dallas",
+            "link": "https://axr2718.github.io/",
+            "image": "img/adrian.jpeg"
+        },
+        {
+            "name": "Harshal Agrawal",
+            "info": "MS CS, UT Dallas",
+            "link": "https://www.linkedin.com/in/harshal-agrawal-2110/",
+            "image": "img/harshal.jpeg"
+        }
+    ],
+    "undergrad": [
+        {
+            "name": "Tyler Le",
+            "info": "BS CS, UT Dallas",
+            "link": "https://www.linkedin.com/in/tylerle29/",
+            "image": "img/tyler.jpeg"
+        }
+    ],
+    "intern": [
+        {
+            "name": "Yuhang Liu",
+            "info": "Fudan University, China"
+        },
+        {
+            "name": "Yuxuan Li",
+            "info": "Harbin Institute of Technology, China"
+        }
+    ],
+    "alumni": [
+        {
+            "name": "Subhrangsu Bose",
+            "info": "MS CS, UT Dallas"
+        },
+        {
+            "name": "Nhi Le",
+            "info": "BS CS, UT Dallas"
+        },
+        {
+            "name": "Zhixuan Wu",
+            "info": "UMichigan"
+        },
+        {
+            "name": "Haoran Guo",
+            "info": "UC Berkeley"
+        }
+    ]
+}

@@ -1,0 +1,562 @@
+:root {
+  --bg-color: #0d1117;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --accent-color: #58a6ff;
+  --accent-hover: #1f6feb;
+  --card-bg: rgba(22, 27, 34, 0.7);
+  --card-border: rgba(48, 54, 61, 0.7);
+  --glass-bg: rgba(13, 17, 23, 0.85);
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --avatar-bg: #333;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --accent-color: #0969da;
+  --accent-hover: #1f6feb;
+  /* Keep similar or darker blue */
+  --card-bg: #f6f8fa;
+  --card-border: #d0d7de;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --avatar-bg: #e1e4e8;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#top-banner {
+  width: 100%;
+  height: 50vh;
+  /* Half viewport height */
+  background-image: url('../img/utd_bg.jpg');
+  /* Removed overlay or keep minimal? User said 'first', implies simple image. Let's keep it clean. */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+#home {
+  /* Removed background image */
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  /* JS will trigger this or we assume immediate load for simplicity initially */
+  animation-delay: 0.1s;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* Main Layout */
+main {
+  max-width: 1000px;
+  margin: 80px auto 40px;
+  /* Top margin for fixed header */
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 6rem;
+  scroll-margin-top: 100px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--card-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+}
+
+/* Hero / About */
+.hero {
+  display: flex;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 2px solid var(--card-border);
+  background: linear-gradient(45deg, #222, #444);
+  /* Placeholder */
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  /* Use primary for better contrast vs secondary */
+  margin-bottom: 1rem;
+  max-width: 600px;
+  font-weight: 400;
+  /* Reset to normal weight now that background is clean */
+  /* Reverted from 500 */
+  text-align: justify;
+}
+
+.highlight-label {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  margin-right: 4px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(48, 54, 61, 0.4);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Cards (News, Pubs, Team) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent-color);
+}
+
+.news-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--card-border);
+  align-items: flex-start;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-family: var(--font-heading);
+  min-width: 80px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.news-content {
+  color: var(--text-secondary);
+}
+
+/* Publications */
+.pub-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.pub-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.pub-authors {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.pub-venue {
+  display: inline-block;
+  background: rgba(88, 166, 255, 0.15);
+  color: var(--accent-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+}
+
+/* Team */
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  /* Prevent squishing */
+  border-radius: 50%;
+  background: var(--avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  /* Larger initials */
+  color: var(--text-secondary);
+  overflow: hidden;
+  /* Ensure image stays in circle */
+}
+
+.team-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sponsors */
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  /* Center them */
+}
+
+.sponsor-item {
+  display: block;
+  transition: transform 0.2s ease;
+  background: var(--card-bg);
+  /* Optional background */
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.sponsor-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-border);
+}
+
+.sponsor-logo {
+  max-width: 200px;
+  /* Limit width */
+  max-height: 100px;
+  /* Limit height */
+  object-fit: contain;
+  display: block;
+}
+
+.team-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.team-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+    margin-top: 70px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+  background: var(--accent-hover);
+}
+
+/* Publication Filters */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* Skeletons */
+.skeleton {
+  background: var(--card-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.05) 20%,
+      rgba(255, 255, 255, 0.1) 60%,
+      rgba(255, 255, 255, 0));
+  animation: shimmer 2s infinite;
+}
+
+[data-theme="light"] .skeleton::after {
+  background-image: linear-gradient(90deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.05) 20%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0));
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.skeleton-title {
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.skeleton-card {
+  height: 200px;
+  border-radius: 12px;
+}

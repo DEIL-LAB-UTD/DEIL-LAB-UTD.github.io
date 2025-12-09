@@ -1,0 +1,13 @@
+{
+    "name": "Data Efficient Intelligent Learning Lab",
+    "title": "Assistant Professor",
+    "department": "Department of Computer Science",
+    "university": "University of Texas at Dallas",
+    "bio": [
+        "We are a research group in the Erik Jonsson School of Engineering and Computer Science at The University of Texas at Dallas, and led by <a href=\"https://yunhuiguo.github.io/\" target=\"_blank\" style=\"color: var(--accent-color); text-decoration: none;\">Dr. Yunhui Guo</a>. ",
+        "Our lab develops data-efficient, reliable, and adaptive machine learning systems. We focus on building vision models that can learn continuously, adapt to shifting real-world environments, and generalize to novel scenarios without forgetting prior knowledge. Our work spans theory and large-scale evaluation, driving advances in robust and reliable learning, continual adaptation, and multimodal intelligence. Ultimately, we aim to enable trustworthy AI systems for IoT, mobile computing, robotics, and self-driving cars.",
+        "We regularly publish our research findings at top-tier ML/AI/CV conferences like CVPR, ECCV, ICCV, ICLR, NeurIPS, and ICML."
+    ],
+    "email": "yunhui.guo@utdallas.edu",
+    "openings": "We are looking for self-motivated PhD students and Research Interns. If you have experience in computer vision or machine learning and are interested in solving challenging research problems, send an email to yunhui.guo@utdallas.edu, with your CV, research statements, and transcripts."
+}

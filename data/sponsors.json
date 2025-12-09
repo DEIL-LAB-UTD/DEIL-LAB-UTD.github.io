@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "name": "National Science Foundation",
+            "image": "img/nsf.jpeg"
+        },
+        {
+            "name": "NVIDIA Academic Grant",
+            "image": "img/nvidia.png"
+        },
+        {
+            "name": "InfoVision",
+            "image": "img/infovision.png"
+        },
+        {
+            "name": "UT Dallas",
+            "image": "img/utd.png"
+        }
+    ],
+    "note": "We thank our sponsors for their generous support."
+}
