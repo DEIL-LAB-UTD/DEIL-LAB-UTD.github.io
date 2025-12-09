@@ -1,1 +1,1 @@
-# DEIL-LAB-UTD.github.io
+This is the source code to the Data Efficient Intelligent Learning Lab's (UT Dallas) group website, borrowed from Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use. If you make further modifications, please give ample amounts of credit to Jon Barron.
