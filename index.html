@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Efficient Intelligent Learning Lab </title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo" style="font-size: 1.1rem; color: #e60000;">Data Efficient Intelligent Learning Lab (DEIL) @ UT
+            Dallas</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><button id="theme-toggle" class="btn"
+                        style="background:transparent; border:none; font-size:1.2rem; cursor:pointer; padding:0 0.5rem;"
+                        aria-label="Toggle theme">☀️</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Top Banner -->
+        <div id="top-banner" class="fade-in"></div>
+
+        <!-- Home / Profile -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-text">
+                <h1 id="profile-name">Loading...</h1>
+                <p id="profile-bio">Loading bio...</p>
+                <div class="social-links" id="profile-links">
+                    <!-- Links injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team">
+            <h2>Group</h2>
+            <div id="team-list">
+                <!-- Team injected by JS -->
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div id="publications-filters" class="filters-container"></div>
+            <div id="publications-list">
+                <!-- Pubs injected by JS -->
+            </div>
+        </section>
+
+
+
+        <!-- Teaching -->
+        <section id="teaching">
+            <h2>Courses</h2>
+            <div id="teaching-list">
+                <!-- Teaching injected by JS -->
+            </div>
+        </section>
+
+        <!-- Sponsors -->
+        <section id="sponsors">
+            <h2>Sponsors</h2>
+            <div id="sponsors-list">
+                <!-- Sponsors injected by JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">↑</button>
+
+    <script src="js/theme.js"></script>
+    <script src="js/data-loader.js"></script>
+</body>
+
+</html>
